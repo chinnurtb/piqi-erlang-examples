@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+#set -x 
+
+
+for i in protobuf json_xml piqi_rpc
+do
+    find $i -type l -delete
+done
+

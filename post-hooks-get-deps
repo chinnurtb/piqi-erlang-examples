@@ -1,0 +1,52 @@
+#!/bin/sh
+
+set -e
+#set -x
+
+
+if [ -z "$REBAR_DEPS_DIR" ]
+then
+        echo "\$REBAR_DEPS_DIR variable is not defined. Upgrade to the latest rebar" 1>&2
+        exit 1
+fi
+
+
+DEST=protobuf/src
+FILES="add_person.erl list_people.erl addressbook.proto.piqi"
+
+for i in $FILES
+do
+	rm -f $DEST/$i
+	ln -sf $REBAR_DEPS_DIR/piqi_src/examples/erlang/$i $DEST/$i
+done
+
+
+DEST=json_xml/src
+FILES="io_json_xml_pb.erl addressbook.proto.piqi"
+
+for i in $FILES
+do
+	rm -f $DEST/$i
+	ln -sf $REBAR_DEPS_DIR/piqi_src/examples/erlang/$i $DEST/$i
+done
+
+
+DEST=json_xml/src
+FILES="io_json_xml_pb.erl addressbook.proto.piqi"
+
+for i in $FILES
+do
+	rm -f $DEST/$i
+	ln -sf $REBAR_DEPS_DIR/piqi_src/examples/erlang/$i $DEST/$i
+done
+
+
+DEST=piqi_rpc/src
+FILES="addressbook.erl addressbook.piqi person.piqi"
+
+for i in $FILES
+do
+	rm -f $DEST/$i
+	ln -sf $REBAR_DEPS_DIR/piqi_src/piqi-rpc/examples/addressbook/$i $DEST/$i
+done
+

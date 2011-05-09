@@ -1,0 +1,6 @@
+{application, piqi_rpc_addressbook,
+ [{description, "Piqi-RPC addressbook service example"},
+  {vsn, "1"},
+  {modules, []},
+  {applications, [kernel, stdlib, piqi_rpc]},
+  {env, []}]}.

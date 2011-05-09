@@ -1,0 +1,32 @@
+
+PIQIC = $(REBAR_DEPS_DIR)/piqi_rpc/priv/bin/piqic-erlang-rpc
+PIQIC_FLAGS =
+
+
+PIQI_FILES = addressbook.piqi
+
+PIQI_ERL_MOD = addressbook
+
+PIQI_HRL_FILES = $(PIQI_ERL_MOD)_piqi.hrl $(PIQI_ERL_MOD)_piqi_impl.hrl
+PIQI_ERL_FILES = $(PIQI_ERL_MOD)_piqi.erl \
+                 $(PIQI_ERL_MOD)_piqi_default_impl.erl \
+                 $(PIQI_ERL_MOD)_piqi_rpc.erl
+
+
+PIQI_ERLANG_FILES = $(PIQI_ERL_FILES) $(PIQI_HRL_FILES)
+
+
+all: $(PIQI_ERLANG_FILES)
+
+
+$(PIQI_ERLANG_FILES): $(PIQI_FILES)
+	for i in $^; do \
+		$(PIQIC) $(PIQIC_FLAGS) $$i; \
+	done
+
+
+clean:
+	rm -f $(PIQI_ERLANG_FILES)
+
+
+# vim: ft=make ts=8

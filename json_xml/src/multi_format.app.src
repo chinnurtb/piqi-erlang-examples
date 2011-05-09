@@ -1,0 +1,6 @@
+{application, multi_format,
+ [{description, "Piqi multi-format serialization example"},
+  {vsn, "1"},
+  {modules, []},
+  {applications, [kernel, stdlib, piqi]},
+  {env, []}]}.

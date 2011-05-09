@@ -1,0 +1,6 @@
+{application, addressbook,
+ [{description, "Piqi/Protobuf addressbook example"},
+  {vsn, "1"},
+  {modules, []},
+  {applications, [kernel, stdlib, piqi]},
+  {env, []}]}.
