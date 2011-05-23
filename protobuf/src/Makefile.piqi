@@ -15,6 +15,7 @@ all: $(PIQI_ERLANG_FILES)
 
 
 $(PIQI_ERLANG_FILES): $(PIQI_FILES)
+	set -e; \
 	for i in $^; do \
 		$(PIQIC) $(PIQIC_FLAGS) $$i; \
 	done
