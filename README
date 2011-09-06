@@ -11,14 +11,6 @@ Rebar is a build tool for Erlang projects. Project homepage is located here:
         https://github.com/basho/rebar
 
 
-Current examples rely on a slightly customized version of rebar. The
-customizations have been submitted for merge into the upstream rebar repository.
-In the meantime, the modified version of rebar can be taken from the current
-repository. The source code is available here:
-
-        https://github.com/alavrik/rebar
-
-
 There are three examples, each contained in a separate directory:
 
 protobuf - compiling .piqi modules for Protocol Buffers serialization
