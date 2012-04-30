@@ -12,7 +12,7 @@ fi
 
 
 DEST=protobuf/src
-FILES="add_person.erl list_people.erl addressbook.proto.piqi"
+FILES="add_person.erl list_people.erl addressbook.proto.piqi addressbook.erlang.piqi"
 
 for i in $FILES
 do
@@ -22,17 +22,7 @@ done
 
 
 DEST=json_xml/src
-FILES="io_json_xml_pb.erl addressbook.proto.piqi"
-
-for i in $FILES
-do
-	rm -f $DEST/$i
-	ln -sf $REBAR_DEPS_DIR/piqi_src/examples/erlang/$i $DEST/$i
-done
-
-
-DEST=json_xml/src
-FILES="io_json_xml_pb.erl addressbook.proto.piqi"
+FILES="io_json_xml_pb.erl addressbook.proto.piqi addressbook.erlang.piqi"
 
 for i in $FILES
 do
